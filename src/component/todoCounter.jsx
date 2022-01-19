@@ -1,8 +1,12 @@
 import React from 'react'
+import '../css/stylesComponents/toDoCounter.css'
 
 function ToDoCounter() {
     return (
-        <h1>Haz completado 2 de 3 tareas</h1>
+        <header className = "header-counter">
+        <h1>Ey what's up?🤙</h1>
+        <p>you have completed two of three tasks</p>
+        </header>
     )
 }
 

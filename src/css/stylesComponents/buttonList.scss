@@ -1,0 +1,23 @@
+@import url(../variablesYglobales.css);
+
+
+
+/*#121f3d
+#09112a
+#f172bc
+#33b1ff
+#d8dfd5
+*/
+.btnAddList{
+    position:fixed;
+    bottom:15px;
+    right:calc(100% - 59%);
+    padding:18px;
+    border-radius: 50%;
+    background: var(--button-crazy);
+    border: none;
+    color: var(--equilibrity-w);
+}
+.fas.fa-plus{
+    font-size: 25px;
+}

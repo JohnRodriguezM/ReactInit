@@ -1,0 +1,22 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+:root{
+    --main-color: #121f3d;
+    --opcion-color: #09112a;
+    --button-crazy: #f172bc;
+    --sky: #33b1ff;
+    --equilibrity-w: #d8dfd5
+}
+
+/*
+font-family: 'Playfair Display', serif;
+hay de italic 400,
+500,
+700,
+*/
+
+

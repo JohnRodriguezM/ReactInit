@@ -1,8 +1,10 @@
 import React from 'react'
+import '../css/stylesComponents/buttonList.css'
+
 
 function ButtonList() {
     return (
-       <button type = "button">+</button>
+       <button className = "btnAddList" type = "button"><i class="fas fa-plus"></i></button>
     )
 }
 

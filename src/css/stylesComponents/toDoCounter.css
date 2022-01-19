@@ -1,0 +1,19 @@
+@import url(../variablesYglobales.css);
+.header-counter {
+  background-color: var(--opcion-color);
+  min-height: 20vh;
+  margin-bottom: 25px;
+  text-align: center;
+  line-height: 45px;
+  letter-spacing: 1.1px;
+  border-radius: 25px;
+  color: var(--equilibrity-w);
+}
+.header-counter h1 {
+  margin-bottom: 15px;
+  padding-top: 20px;
+}
+.header-counter p {
+  font-size: 16px;
+  padding-bottom: 15px;
+}
