@@ -2,8 +2,16 @@ import React from 'react'
 import { todos } from '../App'
 
 
+function TodoList(props){
+    return (
+        <ol>
+        {props.children}{/* recibo los hijos */}
+        </ol>
+    )
+}
 
-function TodoList() {
+
+/* function TodoList() {
     
     return (
         <ol>
@@ -13,7 +21,7 @@ function TodoList() {
             )})}
         </ol>
     )
-}
+} */
 
 
 export { TodoList };

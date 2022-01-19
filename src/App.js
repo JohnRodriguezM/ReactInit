@@ -14,6 +14,8 @@ import { ToDoSearch } from "./component/todoSearch";
 import { ButtonList } from "./component/buttonList";
 // se importa la lista de tareas TodoList..
 import { TodoList } from './component/todoList';
+// se importan los todoItems
+import { TodoItem } from './component/TodoItem';
 
 export const todos = [
   {
@@ -26,26 +28,31 @@ export const todos = [
   },
   {
     text: "analizar el codigo",
-    id : "wordEveryDay"
-  }
+    id : "workEveryDay"
+  },
 ]
 
 
 
 function App() {
   return (
-    <React.Fragment>
+    <React.Fragment>  {/* */}
       <ToDoCounter />
         {/* me llama el h1 principal para el documento */}
       <ToDoSearch />
         {/* lleva un input text por dentro */}
 
         {/* por aqui va el todolist
- */}
-        <TodoList/>
+ */}    <TodoList>
+
+{/* ahi establezco la propiedad text */}
+          {todos.map(item => (
+            <TodoItem contenido = {item.text} id = {item.id}/>
+          ))}
+        </TodoList>
 
 
-      <ButtonList />
+      <ButtonList/>
         {/* se llama el boton para agregar las tareas */}
       {/* <Saludo /> */}
       {/* el componenete saludo se comenta por falta de uso en este momento */}
