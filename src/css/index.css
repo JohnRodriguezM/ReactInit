@@ -5,12 +5,14 @@ body {
   margin: 0 auto;
   padding: 5px;
   font-family: 'Playfair Display', serif;
+  height: 100vh;
   /*
   -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: var(--opcion-color);
+  background: var(--equilibrity-w);
+  /* linear-gradient(140deg, rgba(133,226,232,1) 0%, rgba(234,238,232,1) 50%); */
 }
 

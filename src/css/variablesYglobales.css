@@ -9,8 +9,11 @@
     --opcion-color: hsl(224deg 93% 17%);
     --shadow-color : hsl(223deg 45% 30%);
     --button-crazy: #f172bc;
+    --button-crazy2: #904000;
     --sky: #33b1ff;
-    --equilibrity-w: #d8dfd5
+    --equilibrity-w: #d8dfd5;
+    --sky: rgba(133,226,232,1);
+    --soft-b: #b17c54;
 }
 
 /*

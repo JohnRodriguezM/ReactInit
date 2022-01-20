@@ -45,7 +45,7 @@ function App() {
   return (
     <React.Fragment>  {/* */}
     <ToDoCounter>
-      <Prueba/> {/* traigo un p para el "titulo de la app, usando el props.children" */}
+      
     </ToDoCounter>
         {/* me llama el h1 principal para el documento */}
         <ToDoSearch/>
@@ -60,8 +60,9 @@ function App() {
           ))}
         </TodoList>
 
-
-      <ButtonList/>
+      <ButtonList>
+      <Prueba/> {/* traigo un p para el "titulo de la app, usando el props.children" */}
+      </ButtonList>
         {/* se llama el boton para agregar las tareas */}
       {/* <Saludo /> */}
       {/* el componenete saludo se comenta por falta de uso en este momento */}

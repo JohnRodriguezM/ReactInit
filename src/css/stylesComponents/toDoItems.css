@@ -2,16 +2,19 @@
 .div-items {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 12% 3px 76% 3px 12%;
+  -ms-grid-columns: 12% 76% 12%;
   grid-template-columns: 12% 76% 12%;
-  gap: 3px;
-  background-color: white;
+  width: 95%;
+  max-width: 400px;
+  border: 2px solid var(--button-crazy2);
+  background-color: var(--equilibrity-w);
   margin: 25px auto;
   border-radius: 10px;
   padding: 9px;
 }
 
 .li-Items {
+  color: black;
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
@@ -50,4 +53,12 @@
 
 .is-active-tachado-li-item {
   text-decoration: line-through;
+}
+
+.is-active-btn-say-yes {
+  color: green;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+  -webkit-animation: transform 0.7s;
+          animation: transform 0.7s;
 }

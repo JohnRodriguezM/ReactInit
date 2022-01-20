@@ -14,7 +14,7 @@
     right:15px;
     padding:12px;
     border-radius: 50%;
-    background: var(--button-crazy);
+    background: var(--button-crazy2);
     border: none;
     color: var(--equilibrity-w);
 }
@@ -26,3 +26,19 @@
 .fas.fa-plus{
     font-size: 25px;
 }
+
+.div-span{
+    position: fixed;
+    bottom:7px;
+    left:5px;
+    font-size:15px;
+    font-weight: 500;
+}
+/* span{
+    position: fixed;
+    top:5px;
+    right:5px;
+    font-size:22px;
+    margin-left:10px;
+    margin-right: 10px;
+} */

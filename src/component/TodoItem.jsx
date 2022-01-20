@@ -8,7 +8,7 @@ function TodoItem(props) {
         <li className = {`li-Items ${props.complete && 'is-active-tachado-li-item'}`}>
             {props.contenido}
         </li>
-        <span className = "li-btn-say-yes"  type = "button"><i className="far fa-check-circle"></i></span>
+        <span className = {`li-btn-say-yes ${props.complete && 'is-active-btn-say-yes'}`}  type = "button"><i className="far fa-check-circle"></i></span>
         <span title = "delete" className = "li-btn-delete" type = "button"><i className="fas fa-trash-alt"></i></span>
     </div>
 )
