@@ -11,13 +11,18 @@
 .btnAddList{
     position:fixed;
     bottom:15px;
-    right:calc(100% - 59%);
-    padding:18px;
+    right:15px;
+    padding:12px;
     border-radius: 50%;
     background: var(--button-crazy);
     border: none;
     color: var(--equilibrity-w);
 }
+
+.btnAddList:active{
+    transform: scale(.9);
+}
+
 .fas.fa-plus{
     font-size: 25px;
 }

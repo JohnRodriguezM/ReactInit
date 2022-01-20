@@ -1,5 +1,6 @@
 import React from 'react'
-import { todos } from '../App'
+/* import { todos } from '../App' */
+import '../css/stylesComponents/todoList.css'
 
 
 function TodoList(props){

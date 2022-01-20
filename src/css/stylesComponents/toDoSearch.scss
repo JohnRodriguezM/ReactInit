@@ -1,0 +1,28 @@
+@import url(../variablesYglobales.css);
+
+section{
+    text-align: center;
+    margin: 25px auto;
+    
+}
+
+input{
+    width: 85%;
+    max-width:350px;
+    height: 48px;
+    padding:20px;
+    outline: none;
+    border: none;
+    color:var(--equilibrity-w);
+    border-radius: 15px;
+    background-color: var(--main-color);
+    box-shadow: 0px 0px 40px 20px var(--shadow-color);
+}
+input:focus{
+    transform: scale(1.1);
+}
+
+input::placeholder{
+    text-align: center;
+    color: var(--equilibrity-w);
+}

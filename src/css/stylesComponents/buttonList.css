@@ -8,12 +8,17 @@
 .btnAddList {
   position: fixed;
   bottom: 15px;
-  right: calc(100% - 59%);
-  padding: 18px;
+  right: 15px;
+  padding: 12px;
   border-radius: 50%;
   background: var(--button-crazy);
   border: none;
   color: var(--equilibrity-w);
+}
+
+.btnAddList:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .fas.fa-plus {

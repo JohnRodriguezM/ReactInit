@@ -5,8 +5,9 @@
 }
 
 :root{
-    --main-color: #121f3d;
-    --opcion-color: #09112a;
+    --main-color: hsl(223deg 100% 12%);
+    --opcion-color: hsl(224deg 93% 17%);
+    --shadow-color : hsl(223deg 45% 30%);
     --button-crazy: #f172bc;
     --sky: #33b1ff;
     --equilibrity-w: #d8dfd5
