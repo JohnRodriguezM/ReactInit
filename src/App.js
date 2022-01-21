@@ -20,7 +20,6 @@ import { TodoItem } from './component/TodoItem';
 // este es temporal
 import { Prueba } from "./component/prueba";
 
-
 export const todos = [
   {
     text: "picar la cebolla",
@@ -38,7 +37,7 @@ export const todos = [
     complete: false,
   },
 ]
-
+// Las props son estaticas, nunca se pueden modificar
 
 
 function App() {
@@ -63,6 +62,7 @@ function App() {
       <ButtonList>
       <Prueba/> {/* traigo un p para el "titulo de la app, usando el props.children" */}
       </ButtonList>
+      
         {/* se llama el boton para agregar las tareas */}
       {/* <Saludo /> */}
       {/* el componenete saludo se comenta por falta de uso en este momento */}
