@@ -4,7 +4,7 @@ import './css/App.css';
 import React from 'react'
 
 // importar primer compoenente de prueba
- import { Saludo } from "./component/primero";
+/*  import { Saludo } from "./component/primero"; */
 
 // se importa el componented del ToDoCounter
 import { ToDoCounter } from './component/todoCounter';
@@ -20,13 +20,13 @@ import { TodoItem } from './component/TodoItem';
 // este es temporal
 import { Prueba } from "./component/prueba";
 
-export const todos = [
+export const defaulttodos = [
   {
     text: "picar la cebolla",
     id: "cebollin",
     complete: false,
   },
-  {
+  /* {
     text: "ver el partido de futbol con mis amigos y llevar el pollo asado a la casa",
     id: "partidoAmigos",
     complete: false,
@@ -35,19 +35,29 @@ export const todos = [
     text: "analizar el codigo",
     id : "workEveryDay",
     complete: false,
-  },
+  }, */
 ]
 // Las props son estaticas, nunca se pueden modificar
 
 
 function App() {
+  /* to:  toDoSearch */
+  const [searchValor,setSearchValue] = React.useState('')
+  /* to array de obejtos to:dos */
+  const [todos,setTodos] = React.useState(defaulttodos)
+
+  const [state,setState] = React.useState('')
+
   return (
     <React.Fragment>  {/* */}
     <ToDoCounter>
       
     </ToDoCounter>
         {/* me llama el h1 principal para el documento */}
-        <ToDoSearch/>
+        <ToDoSearch
+            searchValor={searchValor}
+            setSearchValue={setSearchValue}
+        />
         {/* lleva un input text por dentro */}
 
         {/* por aqui va el todolist
@@ -55,7 +65,14 @@ function App() {
 
 {/* ahi establezco la propiedad text */}
           {todos.map(item => (
-            <TodoItem complete = {item.complete} contenido = {item.text} id = {item.id}/>
+            <TodoItem
+            complete = {item.complete}
+            contenido = {item.text}
+            id = {item.id}
+            state = {state}
+            setState = {setState}
+            />
+            
           ))}
         </TodoList>
 

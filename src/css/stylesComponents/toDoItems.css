@@ -2,8 +2,8 @@
 .div-items {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 12% 76% 12%;
-  grid-template-columns: 12% 76% 12%;
+  -ms-grid-columns: 15% 70% 15%;
+  grid-template-columns: 15% 70% 15%;
   width: 95%;
   max-width: 400px;
   border: 2px solid var(--button-crazy2);
@@ -26,10 +26,12 @@
 }
 
 .li-btn-say-yes {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .li-btn-delete {
@@ -53,12 +55,11 @@
 
 .is-active-tachado-li-item {
   text-decoration: line-through;
+  opacity: 0.5;
 }
 
 .is-active-btn-say-yes {
-  color: green;
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-  -webkit-animation: transform 0.7s;
-          animation: transform 0.7s;
+  -webkit-box-shadow: inset 0px 0px 10px 8px green;
+          box-shadow: inset 0px 0px 10px 8px green;
+  /*  animation: box-shadow 10s;  */
 }

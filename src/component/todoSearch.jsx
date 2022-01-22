@@ -1,19 +1,20 @@
 import React from 'react'
 import '../css/stylesComponents/toDoSearch.css'
 
-function ToDoSearch() {
-    const [searchValor,setSearchValue] = React.useState('')
+function ToDoSearch({searchValor,setSearchValue}) {
+    
 
-    const searchValue = event => 
+    const searchValue = event =>
     {
-        console.log(event.target.value)
-        console.clear()
-        setSearchValue(event.target.value)
+       console.log(event.target.value)
+        
+        setSearchValue(event.target.value) 
     };
     return (
         <section>
             <input
-            placeholder="Search your task" 
+            className = "inputSearch"
+            placeholder="Search your task"
             type = "text"
             value = {searchValor}
             onChange = {searchValue}

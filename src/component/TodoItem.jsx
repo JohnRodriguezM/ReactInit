@@ -7,31 +7,34 @@ import '../css/stylesComponents/toDoItems.css'
 
 
 function TodoItem(props) {
+    const [state2,setState2] = React.useState(false);
     const completeOrDelete = message => alert(message);
-    const [state,setState] = React.useState(false)
+    
   return(
       /* llamo la props.text que esta pendiente por definir, en el documento en el que voy a importar esta funcion y en los demas en los que lo requiera */
     <div
     className="div-items">
         <li
             className =
-            {`li-Items ${state && 'is-active-tachado-li-item'}`}>
+            {`li-Items ${state2 && 'is-active-tachado-li-item'}`}>
                 {props.contenido}
         </li>
-        <span
+        <label>
+        <input
             className =
-            {`li-btn-say-yes ${state && 'is-active-btn-say-yes'}`}
-            type = "button"
-            value = {state}
-            onClick = {()=>{
-                setState({isToggleOn: true})
-                console.log(this)
+            {`li-btn-say-yes ${state2 && 'is-active-btn-say-yes'}`}
+            type = "checkbox"
+            value = {state2}
+            onClick = {(event)=>{
+                setState2(event.target.checked)
+                console.log(event.target.checked)
             }}
             >
-        <i
+        {/* <i
             className="far fa-check-circle">
-        </i>
-        </span>
+        </i> */}
+        </input>
+        </label>
         <span
             title = "delete"
             className = "li-btn-delete"

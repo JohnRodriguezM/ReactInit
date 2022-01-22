@@ -1,0 +1,11 @@
+manejo del estado con react.js
+
+el estado no es estatico como las props
+
+
+React hooks:
+
+useState
+useReduce
+useEffect
+

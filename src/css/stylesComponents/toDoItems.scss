@@ -2,7 +2,7 @@
 
 .div-items{
     display: grid;
-    grid-template-columns: 12% 76% 12%;
+    grid-template-columns: 15% 70% 15%;
     width:95%;
     max-width: 400px;
     border: 2px solid var(--button-crazy2);
@@ -19,10 +19,14 @@
     text-decoration: none;
     list-style: none;
 }
+
+
 .li-btn-say-yes{
+    transform: scale(1.25);
     grid-column: 1/2;
-    font-size: 20px;
+    font-size: 15px;
 }
+
 .li-btn-delete{
     grid-row: 1/2;
     grid-column: 3/4;
@@ -38,11 +42,11 @@
 // clase para el texto del div, en el momento en que este activo
 .is-active-tachado-li-item{
     text-decoration: line-through;
+    opacity: .5;
 }
 
 .is-active-btn-say-yes{
-    color: green;
-    transform: scale(1.4);
-    animation: transform .7s;
+    box-shadow: inset 0px 0px 10px 8px green;
+   /*  animation: box-shadow 10s;  */
 }
 
