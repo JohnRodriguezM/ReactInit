@@ -8,19 +8,20 @@ function ToDoSearch({searchValor,setSearchValue}) {
     {
        console.log(event.target.value)
         
-        setSearchValue(event.target.value) 
+      /*   setSearchValue(event.target.value)  */
     };
     return (
+        /* value = {searchValor} */
         <section>
             <input
             className = "inputSearch"
             placeholder="Search your task"
             type = "text"
-            value = {searchValor}
+            
             onChange = {searchValue}
             >
             </input>
-            <p>{searchValor}</p>
+            {/* <p>{searchValor}</p> */}
         </section>
     )
 }
