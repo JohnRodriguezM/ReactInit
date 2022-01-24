@@ -7,9 +7,10 @@ import '../css/stylesComponents/toDoItems.css'
 
 
 function TodoItem(props) {
+    let longitud = props.todos;
     const [state2,setState2] = React.useState(false);
     const [statediv,setStateDiv] = React.useState(false)
-    const completeOrDelete = message => alert(message);
+    /* const completeOrDelete = message => alert(message); */
     
   return(
       /* llamo la props.text que esta pendiente por definir, en el documento en el que voy a importar esta funcion y en los demas en los que lo requiera */
@@ -21,7 +22,7 @@ function TodoItem(props) {
             {`li-Items ${state2 && 'is-active-tachado-li-item'}`}>
                 {props.contenido}
         </li>
-        <label>
+        
         <input
             className =
             {`li-btn-say-yes ${state2 && 'is-active-btn-say-yes'}`}
@@ -30,25 +31,29 @@ function TodoItem(props) {
             onClick = {(event)=>{
                 setState2(event.target.checked)
                 console.log(event.target.checked)
+                
             }}
             >
         {/* <i
             className="far fa-check-circle">
         </i> */}
         </input>
-        </label>
+        
         <span
             title = "delete"
             className = {`li-btn-delete`}
             type = "button"
-            onClick = {()=>{
+            onClick = {(event)=>{
                 setTimeout(()=>{
                     let pregunta = window.confirm("seguro quieres eliminar la tarea")
                     if(pregunta){
                     setStateDiv(true)
+                    
 
                 }else{
+                    console.log(event.target.parentElement)
                     setStateDiv(false)
+                    
                 }
                 },500)
             }}

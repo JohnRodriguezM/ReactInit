@@ -2,6 +2,7 @@
 .div-items {
   display: -ms-grid;
   display: grid;
+  place-items: center;
   -ms-grid-columns: 15% 70% 15%;
   grid-template-columns: 15% 70% 15%;
   width: 95%;
@@ -26,6 +27,8 @@
 }
 
 .li-btn-say-yes {
+  text-align: center;
+  margin: 0 auto;
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
   -ms-grid-column: 1;

@@ -2,6 +2,7 @@
 
 .div-items{
     display: grid;
+    place-items: center;
     grid-template-columns: 15% 70% 15%;
     width:95%;
     max-width: 400px;
@@ -22,6 +23,8 @@
 
 
 .li-btn-say-yes{
+    text-align: center;
+    margin: 0 auto;
     transform: scale(1.25);
     grid-column: 1/2;
     font-size: 15px;

@@ -49,7 +49,10 @@ function App() {
   const [state,setState] = React.useState('')
 
 
-  
+ /*  const completedTodos = todos.filter(todocitos => {
+    todocitos.completed;
+  })   */
+
   return (
     <React.Fragment>  {/* */}
     <ToDoCounter>
@@ -70,9 +73,10 @@ function App() {
             <TodoItem
             complete = {item.complete}
             contenido = {item.text}
-            id = {item.id}
+            key = {item.id}
             state = {state}
             setState = {setState}
+            todos = {todos}
             />
             
           ))}
