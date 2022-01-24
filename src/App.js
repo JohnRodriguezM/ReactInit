@@ -26,7 +26,7 @@ export const defaulttodos = [
     id: "cebollin",
     complete: false,
   },
-  /* {
+   {
     text: "ver el partido de futbol con mis amigos y llevar el pollo asado a la casa",
     id: "partidoAmigos",
     complete: false,
@@ -35,7 +35,7 @@ export const defaulttodos = [
     text: "analizar el codigo",
     id : "workEveryDay",
     complete: false,
-  }, */
+  },
 ]
 // Las props son estaticas, nunca se pueden modificar
 
@@ -48,6 +48,8 @@ function App() {
 
   const [state,setState] = React.useState('')
 
+
+  
   return (
     <React.Fragment>  {/* */}
     <ToDoCounter>
