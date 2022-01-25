@@ -21,7 +21,6 @@ function ToDoSearch({searchValor,setSearchValue}) {
             onChange = {searchValue}
             >
             </input>
-            {/* <p>{searchValor}</p> */}
         </section>
     )
 }

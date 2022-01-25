@@ -29,7 +29,7 @@ export const defaulttodos = [
   {
     text: "ver el partido de futbol con mis amigos y llevar el pollo asado a la casa",
     id: "partidoAmigos",
-    complete: false,
+    complete: true,
   },
   /* {
     text: "analizar el codigo",
@@ -50,6 +50,10 @@ function App() {
 const completedTodos = todos.filter(elemento => !!elemento.complete).length;
 const totalTodos = todos.length;
 
+const text = todos.filter((elemento)  => {
+  return elemento.text.toLowerCase().includes(searchValor.toLowerCase());
+});
+
 
   return (
     <React.Fragment>  {/* */}
@@ -61,6 +65,7 @@ const totalTodos = todos.length;
     </ToDoCounter>
         {/* me llama el h1 principal para el documento */}
         <ToDoSearch
+        
             searchValor={searchValor}
             setSearchValue={setSearchValue}
         />
@@ -70,7 +75,7 @@ const totalTodos = todos.length;
  */}    <TodoList>
 
 {/* ahi establezco la propiedad text */}
-          {todos.map(item => (
+          {/* {todos.map(item => (
             <TodoItem
             complete = {item.complete}
             contenido = {item.text}
@@ -78,7 +83,18 @@ const totalTodos = todos.length;
             
             />
             
-          ))}
+          ))} */}
+          {text.map((item,i)=>{
+            return(
+              <TodoItem
+            complete = {item.complete}
+            contenido = {item.text}
+            id = {item.id}
+            
+            />
+            )
+          })}
+            
         </TodoList>
 
       <ButtonList>
