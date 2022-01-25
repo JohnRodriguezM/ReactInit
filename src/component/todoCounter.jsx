@@ -1,8 +1,7 @@
 import React from 'react'
 import '../css/stylesComponents/toDoCounter.css'
 
-function ToDoCounter(props) {
-    
+function ToDoCounter({ total,completed }) {
     return (
         
         <div className = "header-counter">
@@ -10,7 +9,7 @@ function ToDoCounter(props) {
         {/* <p style = {{
             fontSize : '25px',
         }}>🤙</p> */}
-        <p>You have completed two of three tasks</p>
+        <p>You have completed {completed} of {total} tasks</p>
         </div>
     )
 }

@@ -26,12 +26,12 @@ export const defaulttodos = [
     id: "cebollin",
     complete: false,
   },
-  /* {
+  {
     text: "ver el partido de futbol con mis amigos y llevar el pollo asado a la casa",
     id: "partidoAmigos",
     complete: false,
   },
-  {
+  /* {
     text: "analizar el codigo",
     id : "workEveryDay",
     complete: false,
@@ -40,17 +40,23 @@ export const defaulttodos = [
 // Las props son estaticas, nunca se pueden modificar
 
 
+
 function App() {
   /* to:  toDoSearch */
   const [searchValor,setSearchValue] = React.useState('')
   /* to array de obejtos to:dos */
-  const [todos,setTodos] = React.useState(defaulttodos)
+  const [todos,setTodos] = React.useState(defaulttodos);
+// para los todos completados
+const completedTodos = todos.filter(elemento => !!elemento.complete).length;
+const totalTodos = todos.length;
 
-  const [state,setState] = React.useState('')
 
   return (
     <React.Fragment>  {/* */}
-    <ToDoCounter>
+    <ToDoCounter
+    total = {totalTodos}
+    completed = {completedTodos}
+    >
       
     </ToDoCounter>
         {/* me llama el h1 principal para el documento */}
@@ -69,8 +75,7 @@ function App() {
             complete = {item.complete}
             contenido = {item.text}
             id = {item.id}
-            state = {state}
-            setState = {setState}
+            
             />
             
           ))}
