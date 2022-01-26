@@ -32,10 +32,10 @@
     grid-column: 3/4;
     //max-height: 20px;
 }
-.li-btn-delete:hover{
+.li-btn-delete:active{
     color:red;
-    transform: scale(1.5);
-    transition: transform .7s;
+    transform: scale(1.1);
+    transition: transform .4s;
 }
 
 

@@ -43,14 +43,14 @@
   grid-column: 3/4;
 }
 
-.li-btn-delete:hover {
+.li-btn-delete:active {
   color: red;
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  -webkit-transition: -webkit-transform 0.7s;
-  transition: -webkit-transform 0.7s;
-  transition: transform 0.7s;
-  transition: transform 0.7s, -webkit-transform 0.7s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition: transform 0.4s, -webkit-transform 0.4s;
 }
 
 .is-active-tachado-li-item {

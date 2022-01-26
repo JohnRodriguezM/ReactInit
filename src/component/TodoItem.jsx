@@ -7,7 +7,9 @@ import '../css/stylesComponents/toDoItems.css'
 
 
 function TodoItem(props) {
+
     const [state2,setState2] = React.useState(false);
+
     const completeOrDelete = message => alert(message);
     
   return(

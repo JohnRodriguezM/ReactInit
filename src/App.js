@@ -43,16 +43,20 @@ export const defaulttodos = [
 
 function App() {
   /* to:  toDoSearch */
+
   const [searchValor,setSearchValue] = React.useState('')
-  /* to array de obejtos to:dos */
+
+  /* to array de obejtos to:dos  componente actual (App)*/
+
   const [todos,setTodos] = React.useState(defaulttodos);
-// para los todos completados
+
+// para los todos completados- componente todoCounter
 const completedTodos = todos.filter(elemento => !!elemento.complete).length;
 const totalTodos = todos.length;
 
-const text = todos.filter((elemento)  => {
-  return elemento.text.toLowerCase().includes(searchValor.toLowerCase());
-});
+
+
+
 
 
   return (
@@ -60,9 +64,9 @@ const text = todos.filter((elemento)  => {
     <ToDoCounter
     total = {totalTodos}
     completed = {completedTodos}
-    >
+    />
       
-    </ToDoCounter>
+    
         {/* me llama el h1 principal para el documento */}
         <ToDoSearch
         
@@ -74,27 +78,15 @@ const text = todos.filter((elemento)  => {
         {/* por aqui va el todolist
  */}    <TodoList>
 
-{/* ahi establezco la propiedad text */}
-          {/* {todos.map(item => (
-            <TodoItem
-            complete = {item.complete}
-            contenido = {item.text}
-            id = {item.id}
-            
-            />
-            
-          ))} */}
-          {text.map((item,i)=>{
+          {todos.map((item)=>{
             return(
               <TodoItem
             complete = {item.complete}
             contenido = {item.text}
-            id = {item.id}
-            
+            key = {item.id}
             />
             )
           })}
-            
         </TodoList>
 
       <ButtonList>
