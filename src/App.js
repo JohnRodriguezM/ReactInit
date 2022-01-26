@@ -31,11 +31,11 @@ export const defaulttodos = [
     id: "partidoAmigos",
     complete: true,
   },
-  /* {
+   {
     text: "analizar el codigo",
     id : "workEveryDay",
     complete: false,
-  }, */
+  }, 
 ]
 // Las props son estaticas, nunca se pueden modificar
 
@@ -56,47 +56,62 @@ const totalTodos = todos.length;
 
 
 
+let searchTodos = [];
 
+if(!searchValor.length === 1){
+  searchTodos = todos;
+  console.log(searchTodos)
+}else{
+  searchTodos = todos.filter(elemento => {
+    const texto = elemento.text.toLowerCase();
+    console.log(texto)
+    const textoBuscado = searchValor.toLowerCase()
+    console.log(textoBuscado)
+    
+    return texto.includes(textoBuscado)
+  
+
+});
+}
 
 
   return (
-    <React.Fragment>  {/* */}
+    <>
+
     <ToDoCounter
-    total = {totalTodos}
-    completed = {completedTodos}
+      total = {totalTodos}
+      completed = {completedTodos}
     />
-      
-    
-        {/* me llama el h1 principal para el documento */}
-        <ToDoSearch
-        
-            searchValor={searchValor}
-            setSearchValue={setSearchValue}
-        />
-        {/* lleva un input text por dentro */}
+{/* me llama el h1 principal para el documento */}
+    <ToDoSearch
+      searchValor={searchValor}
+      setSearchValue={setSearchValue}
+    />
+{/* lleva un input text por dentro */}
 
-        {/* por aqui va el todolist
- */}    <TodoList>
-
-          {todos.map((item)=>{
-            return(
-              <TodoItem
-            complete = {item.complete}
-            contenido = {item.text}
-            key = {item.id}
+{/* por aqui va el todolist*/}
+    <TodoList>
+      {searchTodos.map((item)=>{
+        return(
+            <TodoItem
+              complete = {item.complete}
+              contenido = {item.text}
+              key = {item.id}
             />
-            )
+              )
           })}
-        </TodoList>
+    </TodoList>
 
-      <ButtonList>
+    <ButtonList>
       <Prueba/> {/* traigo un p para el "titulo de la app, usando el props.children" */}
-      </ButtonList>
-      
+    </ButtonList>
+
         {/* se llama el boton para agregar las tareas */}
+
+
       {/* <Saludo /> */}
       {/* el componenete saludo se comenta por falta de uso en este momento */}
-    </React.Fragment>
+    </>
   );
 }
 

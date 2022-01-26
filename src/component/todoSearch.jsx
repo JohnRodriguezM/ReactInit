@@ -2,20 +2,14 @@ import React from 'react'
 import '../css/stylesComponents/toDoSearch.css'
 
 function ToDoSearch({searchValor,setSearchValue}) {
-    
 
-    /* const searchValue = event =>
+    const searchValue = event =>
     {
-       console.log(event.target.value)
-        
-      /*   setSearchValue(event.target.value)  
-    }; 
+    console.log(event.target.value)
     
-onChange = {() => {
-                setSearchValue(event.target.value) 
-            }}
-
-    */
+    setSearchValue(event.target.value)  
+    };
+    
     return (
         /* value = {searchValor} */
         <section>
@@ -23,11 +17,12 @@ onChange = {() => {
             className = "inputSearch"
             placeholder="Search your task"
             type = "text"
-            
-            
+            value = {searchValor}
+            onChange = {searchValue}
             >
+
             </input>
-            <p>{/* {searchValue} */}</p>
+            {/* <p>{searchValor}</p> */}
         </section>
     )
 }
