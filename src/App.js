@@ -19,6 +19,8 @@ import { TodoItem } from './component/TodoItem';
 
 // este es temporal
 import { Prueba } from "./component/prueba";
+import { Checked } from './component/complete&&delete/checked';
+import {Lista} from "./component/complete&&delete/lista"
 
 export const defaulttodos = [
   {
@@ -73,6 +75,8 @@ if(!searchValor.length === 1){
 
 });
 }
+// para el checked y el delete
+const [state2,setState2] = React.useState(false);
 
 
   return (
@@ -91,15 +95,23 @@ if(!searchValor.length === 1){
 
 {/* por aqui va el todolist*/}
     <TodoList>
+    <TodoItem
+    children = {<Lista/>}>
       {searchTodos.map((item)=>{
         return(
-            <TodoItem
+            <Lista
+            
+            
               complete = {item.complete}
               contenido = {item.text}
               key = {item.id}
+              
             />
+           
+            
               )
           })}
+          </TodoItem>
     </TodoList>
 
     <ButtonList>

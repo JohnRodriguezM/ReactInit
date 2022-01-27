@@ -8,6 +8,7 @@ function TodoList(props){
         <ol>
         {props.children}{/* recibo los hijos */}
         </ol>
+        
     )
 }
 

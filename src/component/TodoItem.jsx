@@ -1,14 +1,16 @@
 import React from 'react';
 import '../css/stylesComponents/toDoItems.css'
 
+import { Checked } from "./complete&&delete/checked"
+import { Delete } from "./complete&&delete/delete"
+import {Lista} from "./complete&&delete/lista"
 
 
 
 
+function TodoItem({contenido, state2, setState2,children}) {
 
-function TodoItem(props) {
-
-    const [state2,setState2] = React.useState(false);
+    
 
     const completeOrDelete = message => alert(message);
     
@@ -16,28 +18,25 @@ function TodoItem(props) {
       /* llamo la props.text que esta pendiente por definir, en el documento en el que voy a importar esta funcion y en los demas en los que lo requiera */
     <div
     className="div-items">
-        <li
+    <div className = "div-items">{children}</div>
+        {/* <li
+        
+            
             className =
             {`li-Items ${state2 && 'is-active-tachado-li-item'}`}>
-                {props.contenido}
-        </li>
-        <label>
-        <input
-            className =
-            {`li-btn-say-yes ${state2 && 'is-active-btn-say-yes'}`}
-            type = "checkbox"
-            value = {state2}
-            onClick = {(event)=>{
-                setState2(event.target.checked)
-                console.log(event.target.checked)
-            }}
-            >
-        {/* <i
-            className="far fa-check-circle">
-        </i> */}
-        </input>
-        </label>
-        <span
+                {contenido}
+        </li> */}
+        
+        <Checked
+            state2 = {state2}
+            setState2 = {setState2}
+        />
+
+
+        <Delete
+            contenido = {contenido}
+        />
+        {/* <span
             title = "delete"
             className = "li-btn-delete"
             type = "button"
@@ -48,7 +47,7 @@ function TodoItem(props) {
         <i
             className="fas fa-trash-alt">
         </i>
-        </span>
+        </span> */}
     </div>
 )
 }
