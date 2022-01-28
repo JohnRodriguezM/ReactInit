@@ -54,8 +54,12 @@ function App() {
 
 // para los todos completados- componente todoCounter
 const completedTodos = todos.filter(elemento => !!elemento.complete).length;
+console.log(completedTodos)
 const totalTodos = todos.length;
 
+/* const completedTodoss = (e) =>{
+  setState2(e.target.checked)
+} */
 
 
 let searchTodos = [];
@@ -78,7 +82,7 @@ if(!searchValor.length === 1){
 // para el checked y el delete
 
 const [state2,setState2] = React.useState(false);
-
+const completedd = todos.filter(elemento => !!elemento.complete)
 
   return (
     <>
@@ -106,8 +110,8 @@ const [state2,setState2] = React.useState(false);
               contenido = {item.text}
               key = {i}
               id = {i}
-              state2={i}
-              setState2 = {setState2}
+              array = {completedd}
+              completedTodos = {completedTodos}
             />
               )
           })}

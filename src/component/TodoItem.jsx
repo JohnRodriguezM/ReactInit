@@ -9,9 +9,9 @@ import {Lista} from "./complete&&delete/lista"
 
 
 
-function TodoItem({contenido, state2, setState2,id}) {
+function TodoItem({contenido,id,array,completedTodos}) {
 
-    
+    const [state2,setState2] = React.useState(false);
 
     const completeOrDelete = message => alert(message);
     
@@ -20,32 +20,35 @@ function TodoItem({contenido, state2, setState2,id}) {
     <div
     className="div-items">
     <li
-
+    id = {id}
     className =
     {`li-Items ${state2 && 'is-active-tachado-li-item'}`}>
         {contenido}
     </li>
         
-    <label>
-    <span  className =
+    
+    <input  className =
             {`li-btn-say-yes ${state2 && 'is-active-btn-say-yes'}`}
             type = "checkbox"
-            
+            id = {id}
             onClick = {(event)=>{
                 event.stopPropagation();
-               
-                    setState2(event.target.id)
-                
+
+                if(event.target.id){
+                   array.push(event.target.parentElement.firstChild)
+                   if(array.includes(event.target.id)){
+                       array.pop()
+                   }
+                    console.log(array)
+                    setState2(event.target.checked)
+                }
                 console.log(state2)
                 console.log(id)
-                console.log(event.target)
-                console.log(event.nodeName)
+                console.log(event.target.id)
+                console.log(event.target.parentElement)
             }}>
-    <i
-    className="fas fa-trash-alt">
-</i>
-    </span>
-  </label>
+    </input>
+  
 
 
   <span
