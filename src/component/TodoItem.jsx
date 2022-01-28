@@ -18,7 +18,8 @@ function TodoItem({contenido, state2, setState2,children}) {
       /* llamo la props.text que esta pendiente por definir, en el documento en el que voy a importar esta funcion y en los demas en los que lo requiera */
     <div
     className="div-items">
-    <div className = "div-items">{children}</div>
+    <li>{children}</li>
+    
         {/* <li
         
             

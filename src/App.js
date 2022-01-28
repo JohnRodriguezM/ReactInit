@@ -94,9 +94,9 @@ const [state2,setState2] = React.useState(false);
 {/* lleva un input text por dentro */}
 
 {/* por aqui va el todolist*/}
-    <TodoList>
+    <TodoList children = {<Lista/>}>
     <TodoItem
-    children = {<Lista/>}>
+    >
       {searchTodos.map((item)=>{
         return(
             <Lista
