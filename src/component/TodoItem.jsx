@@ -1,3 +1,4 @@
+import { eventWrapper } from '@testing-library/user-event/dist/utils';
 import React from 'react';
 import '../css/stylesComponents/toDoItems.css'
 
@@ -8,7 +9,7 @@ import {Lista} from "./complete&&delete/lista"
 
 
 
-function TodoItem({contenido, state2, setState2,children}) {
+function TodoItem({contenido, state2, setState2,id}) {
 
     
 
@@ -18,25 +19,47 @@ function TodoItem({contenido, state2, setState2,children}) {
       /* llamo la props.text que esta pendiente por definir, en el documento en el que voy a importar esta funcion y en los demas en los que lo requiera */
     <div
     className="div-items">
-    <li>{children}</li>
-    
-        {/* <li
+    <li
+
+    className =
+    {`li-Items ${state2 && 'is-active-tachado-li-item'}`}>
+        {contenido}
+    </li>
         
+    <label>
+    <span  className =
+            {`li-btn-say-yes ${state2 && 'is-active-btn-say-yes'}`}
+            type = "checkbox"
             
-            className =
-            {`li-Items ${state2 && 'is-active-tachado-li-item'}`}>
-                {contenido}
-        </li> */}
-        
-        <Checked
-            state2 = {state2}
-            setState2 = {setState2}
-        />
+            onClick = {(event)=>{
+                event.stopPropagation();
+               
+                    setState2(event.target.id)
+                
+                console.log(state2)
+                console.log(id)
+                console.log(event.target)
+                console.log(event.nodeName)
+            }}>
+    <i
+    className="fas fa-trash-alt">
+</i>
+    </span>
+  </label>
 
 
-        <Delete
-            contenido = {contenido}
-        />
+  <span
+    title = "delete"
+    className = "li-btn-delete"
+    type = "button"
+    onClick = {()=>{
+        setTimeout(()=>{alert(`haz eliminado la tarea ${contenido}`)},500)
+    }}
+    >
+<i
+    className="fas fa-trash-alt">
+</i>
+</span>
         {/* <span
             title = "delete"
             className = "li-btn-delete"

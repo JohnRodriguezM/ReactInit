@@ -31,7 +31,7 @@ export const defaulttodos = [
   {
     text: "ver el partido de futbol con mis amigos y llevar el pollo asado a la casa",
     id: "partidoAmigos",
-    complete: true,
+    complete: false,
   },
    {
     text: "analizar el codigo",
@@ -66,9 +66,9 @@ if(!searchValor.length === 1){
 }else{
   searchTodos = todos.filter(elemento => {
     const texto = elemento.text.toLowerCase();
-    console.log(texto)
+    /* console.log(texto) */
     const textoBuscado = searchValor.toLowerCase()
-    console.log(textoBuscado)
+    /* console.log(textoBuscado) */
     
     return texto.includes(textoBuscado)
   
@@ -76,6 +76,7 @@ if(!searchValor.length === 1){
 });
 }
 // para el checked y el delete
+
 const [state2,setState2] = React.useState(false);
 
 
@@ -94,25 +95,23 @@ const [state2,setState2] = React.useState(false);
 {/* lleva un input text por dentro */}
 
 {/* por aqui va el todolist*/}
-    <TodoList children = {<Lista/>}>
-    <TodoItem
+    
+    <TodoList
+    
     >
-      {searchTodos.map((item)=>{
+      {searchTodos.map((item,i)=>{
         return(
-            <Lista
-            
-            
+            <TodoItem
               complete = {item.complete}
               contenido = {item.text}
-              key = {item.id}
-              
+              key = {i}
+              id = {i}
+              state2={i}
+              setState2 = {setState2}
             />
-           
-            
               )
           })}
-          </TodoItem>
-    </TodoList>
+          </TodoList>
 
     <ButtonList>
       <Prueba/> {/* traigo un p para el "titulo de la app, usando el props.children" */}
