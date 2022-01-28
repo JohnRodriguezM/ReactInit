@@ -54,7 +54,10 @@ function App() {
 const completedTodos = todos.filter(elemento => !!elemento.complete).length;
 const totalTodos = todos.length;
 
-
+/* function deleteTodo(text){
+  const newTodos = todos.filter(todo=>todo.text !== text)
+  setTodos(newTodos)
+} */
 
 let searchTodos = [];
 
